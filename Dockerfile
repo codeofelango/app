@@ -28,12 +28,12 @@ COPY . .
 RUN pip install flask gunicorn  google-cloud-bigquery
 
 # Make port 5000 available to the world outside this container
-EXPOSE 5000
+# EXPOSE 5000
 # Define environment variable
-ENV FLASK_APP=run.py
+# ENV FLASK_APP=run.py
 # Run app.py when the container launches
-CMD ["gunicorn", "-b", ":5000", "app:run"]
+# CMD ["gunicorn", "-b", ":5000", "app:run"]
 
 
-# CMD gunicorn --bind :$PORT app:app
+CMD gunicorn --bind :$PORT app:app
 
