@@ -1,0 +1,143 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<body>
+    <div class="container">
+      
+      <div class="row mt-0">
+        <div class="col-md-8 offset-md-2">
+          <div class="login-form">
+            <div class=" row modal-body">
+              <div class="card card-1">
+                <div class="card__icon"><i class="fas fa-bolt"></i></div>
+                <p class="card__exit"><i class="fas fa-times"></i></p>
+                <h2 class="card__title">Please sumbit your details for Catering and Food Truck order .</h2>
+                <!-- <p class="card__apply">
+                  <a class="card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
+                </p> -->
+              </div>
+            </div>
+            
+            <form method="POST" action="/submit">
+                <div class="form-group">
+                  
+                    <label for="language" id="language_lbl" name="language_lbl">
+                      <!-- <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.<path style="color:whitesmoke" d="M0 128C0 92.7 28.7 64 64 64l192 0 48 0 16 0 256 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64l-256 0-16 0-48 0L64 448c-35.3 0-64-28.7-64-64L0 128zm320 0l0 256 256 0 0-256-256 0zM178.3 175.9c-3.2-7.2-10.4-11.9-18.3-11.9s-15.1 4.7-18.3 11.9l-64 144c-4.5 10.1 .1 21.9 10.2 26.4s21.9-.1 26.4-10.2l8.9-20.1 73.6 0 8.9 20.1c4.5 10.1 16.3 14.6 26.4 10.2s14.6-16.3 10.2-26.4l-64-144zM160 233.2L179 276l-38 0 19-42.8zM448 164c11 0 20 9 20 20l0 4 44 0 16 0c11 0 20 9 20 20s-9 20-20 20l-2 0-1.6 4.5c-8.9 24.4-22.4 46.6-39.6 65.4c.9 .6 1.8 1.1 2.7 1.6l18.9 11.3c9.5 5.7 12.5 18 6.9 27.4s-18 12.5-27.4 6.9l-18.9-11.3c-4.5-2.7-8.8-5.5-13.1-8.5c-10.6 7.5-21.9 14-34 19.4l-3.6 1.6c-10.1 4.5-21.9-.1-26.4-10.2s.1-21.9 10.2-26.4l3.6-1.6c6.4-2.9 12.6-6.1 18.5-9.8l-12.2-12.2c-7.8-7.8-7.8-20.5 0-28.3s20.5-7.8 28.3 0l14.6 14.6 .5 .5c12.4-13.1 22.5-28.3 29.8-45L448 228l-72 0c-11 0-20-9-20-20s9-20 20-20l52 0 0-4c0-11 9-20 20-20z"/></svg> -->
+                      Language</label>
+                    <select class="form-control rounded-pill" id="language" name="language" aria-describedby="language" required placeholder=""><option>English</option><option>Arabic</option></select>
+                  </div>
+                  <div class="form-group mt-2">
+                    <label for="servicetype"  id="servicetype_lbl" name="servicetype_lbl">Service Type</label>
+                    <select class="form-control rounded-pill" id="servicetype" name="servicetype" required aria-describedby="servicetype" placeholder=""><option>Catering</option><option>Food Truck</option></select>
+                  </div>
+                  <div class="form-group">
+                    <label for="noofpeople"  id="noofpeople_lbl" name="noofpeople_lbl">Number of people</label>
+                    <select class="form-control rounded-pill" id="noofpeople" name="noofpeople" required aria-describedby="noofpeople" placeholder=""><option>0-100</option><option>100-200</option><option>200-300</option><option>300-400</option><option>400-500</option><option> > 500</option></select>
+                  </div>
+                  
+              <div class="form-group">
+                <label for="eventtype"  id="eventtype_lbl" name="eventtype_lbl">Event type</label>
+                <input type="text" class="form-control rounded-pill" id="eventtype" name="eventtype" required placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="Date"  id="date_lbl" name="date_lbl">Date</label>
+                <input type="date" class="form-control rounded-pill" id="date"   name="date" required placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="city"  id="city_lbl" name="city_lbl">City</label>
+                <input type="text" class="form-control rounded-pill" id="city" name="city" required placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="neighbothood"  id="neighbothood_lbl" name="neighbothood_lbl">Neighborhood</label>
+                <input type="text" class="form-control rounded-pill" id="neighbothood" name="neighbothood" required placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="contactno"  id="contactno_lbl" name="contactno_lbl">Contact number</label>
+                <input type="text" class="form-control rounded-pill"  maxlength ='10' id="contactno" name="contactno" required placeholder="">
+              </div>
+              <button type="submit" class="btn btn-primary rounded-pill">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+      $("#language").change(function(){
+      var value = $(this).val();
+      if (value == "Arabic") {
+        $("#noofpeople_lbl").text("عدد الوجبات")
+        var st = $("#servicetype").val()
+        if (st == "طلبات المناسبات") {
+        $("#noofpeople_lbl").text("عدد الوجبات")
+        }
+        else {
+        $("#noofpeople_lbl").text("عدد الاشخاص")
+        }
+        $("#servicetype_lbl").text("نوع الخدمة")
+        $("#eventtype_lbl").text("نوع المناسبة ")
+        $("#date_lbl").text("التاريخ ")
+        $("#city_lbl").text("المدينة ")
+        $("#neighbothood_lbl").text("الحي")
+        $("#contactno_lbl").text("رقم التواصل ")
+        var svtype= '<option class="rounded-pill">طلبات المناسبات </option><option class="rounded-pill">فود ترك </option>';
+        $("#servicetype").empty()
+        $("#servicetype").html(svtype)
+
+      } else {
+        $("#servicetype_lbl").text("service type")
+
+        var st = $("#servicetype").val()
+        if (st == "Catering") {
+        $("#noofpeople_lbl").text("Number of Meals")
+        }
+        else {
+        $("#noofpeople_lbl").text("Number of people")
+        }
+        $("#eventtype_lbl").text("Event type")
+        $("#date_lbl").text("Date")
+        $("#city_lbl").text("City")
+        $("#neighbothood_lbl").text("Neighborhood")
+        $("#contactno_lbl").text("Contact number")
+        var svtype= '<option class="rounded-pill">Catering</option><option class="rounded-pill">Food Truck</option>';
+
+        $("#servicetype").empty()
+        $("#servicetype").html(svtype)
+      }
+    });
+      $("#servicetype").change(function(){
+            // servicetype
+            // noofpeople
+            // eventtype
+            // date
+            // city
+            // neighbothood
+            // contactno
+            var st = $("#servicetype").val()
+            var lvalue = $("#language").val();
+      if (lvalue == "English") {
+        if (st == "Catering") {
+        $("#noofpeople_lbl").text("Number of Meals")
+        }
+        else {
+        $("#noofpeople_lbl").text("Number of people")
+        }    
+      }
+      else
+      if (lvalue == "Arabic") {
+        if (st == "طلبات المناسبات") {
+        $("#noofpeople_lbl").text("عدد الوجبات")
+        }
+        else {
+        $("#noofpeople_lbl").text("عدد الاشخاص")
+        }    
+      }
+      });
+    </script>
+  </body>
+{% endblock %}
